@@ -1,0 +1,68 @@
+import java.util.Scanner;
+
+
+public class voiture {
+
+	/**
+	 * @param args
+	 */
+	
+	public static void incre(){
+		System.out.println("entrez le nom de la voiture");
+		Scanner s =new Scanner(System.in);
+		String nom=s.nextLine();
+		System.out.println("entrez la vitesse de la voiture");
+		Scanner sc =new Scanner(System.in);
+		int v=sc.nextInt();
+				if (v>0){
+		v=v+1;
+		System.out.println("la vitesse de la voiture "+nom+" aprés l'incrementation est:" +v);
+		}
+		else{
+			System.out.println("la vitesse ne peut pas etre négative");
+		
+		}
+	}
+	public static void decre(){
+		System.out.println("entrez le nom de la voiture");
+		Scanner s =new Scanner(System.in);
+		String nom=s.nextLine();
+		System.out.println("entrez la vitesse de la voiture");
+		Scanner sc =new Scanner(System.in);
+		int v=sc.nextInt();
+		if(v<0){
+			System.out.println("la vitesse ne peut pas etre négative");
+		}
+		else if (v==0){
+			System.out.println("en peut pas incremmentez une vitesse nul");
+		}
+		else {
+			v=v-1;
+			System.out.println("la vitesse de la voiture "+nom+" aprés la décrementation est:" +v);
+		}
+	}
+	public static void choix(){
+		System.out.println("entrez 1 si vous voulez incrémentez et 2 si vous voulez décrémentez");
+		Scanner x =new Scanner(System.in);
+		int ch=x.nextInt();
+		switch (ch) {
+		case 1: incre();
+		break;
+		case 2: decre();
+		break;
+		}
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		choix();
+		System.out.println("entrez 0 si vous voulez ré-choisir");
+		Scanner y =new Scanner(System.in);
+		int f=y.nextInt();
+		while (f==0){
+			choix();
+		}
+		
+		
+	}
+
+}

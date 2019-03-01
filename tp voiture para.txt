@@ -1,0 +1,69 @@
+public class voiture {
+	int v ;
+	String nom ;
+	voiture(int att1,String att2){	
+		v=att1;
+		nom=att2;		
+	}
+ public void incrementation (int att)
+ {att++	 ;
+ System.out.println("vitesse apre l incrementation recoit=   "+att);
+
+ 
+ }
+ public void decrementation (int att)
+
+ { if (att-1<0)  
+	 System.out.println("la vitesse  est tjr positive   ");
+ else  {att-- ;System.out.println("vitesse recoit=   "+att);}
+ 
+	}
+ }
+
+adiaclass louwla
+
+public class feux_sin {
+	String pos ,coul;
+	 String col  [] ={"vert","orange","rouge"};  
+		feux_sin( String att1,String  att2){
+			coul=att1;
+		pos =att2;
+					
+	}
+	 String   change_coul (int att )	  
+	 {			  		  
+		  System.out.println("la couleur est sera "+col [(att+1)%2]);
+		  return(col [(att+1)%2]);
+	 
+	 }
+
+}
+
+adiaclass
+fau
+
+public class test {
+
+	public static void main(String[] args) {
+
+		System.out.println("la voiteur  de nom  golf   ");		
+		 System.out.println("avec vitess est 0 ");		
+		System.out.println("le feuc intiale est rouge  ");	
+		System.out.println("la place est  guelma ");	
+		
+		
+	   voiture v1=new voiture (0, "golf") ;	
+	   
+	   
+	   feux_sin fu=new feux_sin ("vert ", "guelma" ) ;
+	   
+	   String nc= fu.change_coul(3);	
+	   
+	  if (!nc.equals("rouge ")){v1.incrementation(0);System.out.println("la voituer est démarrè ");
+	 }
+	
+}
+		}
+
+whediexucution
+Fin de la conversation

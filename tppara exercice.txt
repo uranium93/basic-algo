@@ -1,0 +1,10 @@
+
+modélisez la class feu de signalisation:
+-2 attributs (couleur et position"double")
+-constructeur qui prend 2 arguments
+-une méthode changecouleur qui retourne un string(nouvelle couleur)
+
+dans la class execution (le main):
+-2 instanciation: 1)voiture devant avec les argument"golf" et "o";
+                  2)feu de signalisation devant avec les arguments"rouge" et "13.4"
+-changer la methode "changecouleur" et testez si elle retourne"vert" si oui alors faite appelle à la méthode incrementation.

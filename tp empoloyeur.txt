@@ -1,0 +1,92 @@
+import outillage.imprimante;
+
+public class employer {
+	String nom;
+	employeur em;
+	employer(String att1,employeur att2){
+		 em=att2;
+	    nom=att1;
+	    System.out.println("le nom de l''employer esr"+nom);
+	    System.out.println("le nom de l''employer esr"+em.nom);
+	    
+		
+	}
+	String return_nom(int att){
+		 return nom; 				 
+	 }
+	 void apell( employer att2 ){
+		 System.out.println("l''employer    "+nom+"    apelle    "+att2.nom);
+	 }
+	void imprime(imprimante a){	
+		a.empression();
+		
+		
+		
+	}
+	 }
+
+public class employeur {
+	String nom ;
+	int nbre;
+	 employeur(String att1 , int att2){
+	 nom=att1;
+	 nbre=att2;		
+		
+	}
+	 String return_nom(int att){
+		 return nom; 				 
+	 }
+	 void affiche_info(){
+			String n=return_nom(nbre);
+			System.out.println("le nom de l''employer est  "+n);
+			System.out.println("le numero d'employer est  "+nbre);
+		 
+		 
+	 }
+	 
+
+}
+
+import outillage.imprimante;
+
+
+public class executer {
+	
+	
+	public static void main(String[] args) {
+		Telecom t=new Telecom("4G","algerieTelecom",3000);
+		employeur n=new employeur("algerieTelecom",300);
+		employer a=new employer("mouhamed",n);
+		employer b=new employer("ali",n);
+		imprimante i =new imprimante("Canon");
+		t.affiche_info();
+		a.apell( b);
+		a.imprime(i);
+		
+		
+		
+
+	}
+
+}
+
+public class Telecom extends employeur  {
+	
+	String Type_resaux ;
+	Telecom(String att1 ,String att2 , int att3){
+		super( att2 ,  att3);
+	Type_resaux=att1;	
+	}
+}
+package outillage;
+
+public class imprimante {
+	String nom ;
+	public imprimante(String att){
+		nom=att;		
+	}
+	public void empression(){
+		System.out.println("votre decument est entrain d'impression ");		
+	}
+
+}
